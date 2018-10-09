@@ -31,6 +31,7 @@ public class GreedyGuessPlayer  implements Player{
 	
 	private boolean isHit;
 	private LinkedList<Cell> target;
+    
 	@Override
     public void initialisePlayer(World world) {
         this.numRow = world.numRow;
