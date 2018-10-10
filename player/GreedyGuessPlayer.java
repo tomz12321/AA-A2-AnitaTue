@@ -18,7 +18,7 @@ import world.World.ShipLocation;
  *
  * @author Youhan Xia, Jeffrey Chan
  */
-public class GreedyGuessPlayer  implements Player{
+public class GreedyGuessPlayer implements Player{
 
 	private int numRow;
 	private int numColumn;
@@ -31,6 +31,7 @@ public class GreedyGuessPlayer  implements Player{
 	
 	private boolean isHit;
 	private LinkedList<Cell> target;
+    
 	@Override
     public void initialisePlayer(World world) {
         this.numRow = world.numRow;
@@ -68,7 +69,8 @@ public class GreedyGuessPlayer  implements Player{
 		//initialize huntGuess
 		for(int i = 0; i < numRow; i++) {
 			for(int j = 0; j < numColumn; j++) {
-				if((i+j) % 2 == 0) this.huntGuess.add(board[i][j]);
+				if((i+j) % 2 == 0) 
+                    this.huntGuess.add(board[i][j]);
 			}
 		}
 		//shuffle huntGuess--> add some random
@@ -167,7 +169,8 @@ public class GreedyGuessPlayer  implements Player{
     		}else {
     			do {
     				target.pop();
-    				if(target.isEmpty()) break;
+    				if(target.isEmpty()) 
+                        break;
     			}while(target.peek().adjC.isEmpty());
     		}
 
@@ -218,8 +221,10 @@ public class GreedyGuessPlayer  implements Player{
     	
     	@Override
     	public boolean equals(Object o) {
-    		if(this == o) return true;
-    		if(o == null || o.getClass() != this.getClass()) return false;
+    		if(this == o) 
+                return true;
+    		if(o == null || o.getClass() != this.getClass()) 
+                return false;
     		
     		OwnShip os = (OwnShip) o;
     		return this.ship == os.ship;

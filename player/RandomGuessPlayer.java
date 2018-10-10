@@ -51,12 +51,12 @@ public class RandomGuessPlayer extends Guesser implements Player{
     @Override
     public Guess makeGuess() {
         // To be implemented.
-        int maximumNumber = 10; 
-        int rand = 1 + (int) (Math.random() * maximumNumber);
+        // int maximumNumber = 10; 
+        // int rand = 1 + (int) (Math.random() * maximumNumber);
 
-        {
-            System.out.println("Random Number:" + rand);
-        }
+        // {
+        //     System.out.println("Random Number:" + rand);
+        // }
 
         //get a random index and pop a guess object from the list
         Random random = new Random();
