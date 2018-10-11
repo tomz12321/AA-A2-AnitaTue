@@ -20,7 +20,6 @@ public class RandomGuessPlayer extends Guesser implements Player{
 
     @Override
     public void initialisePlayer(World world) {
-        // To be implemented.
         this.myWorld = world;
         this.hitsToMyFleet = new ArrayList<>();
         this.allAvailableGuesses = new ArrayList<>();
@@ -47,7 +46,6 @@ public class RandomGuessPlayer extends Guesser implements Player{
     //} // end of getAnswer()
 
 
-
     @Override
     public Guess makeGuess() {
         // To be implemented.
@@ -70,7 +68,7 @@ public class RandomGuessPlayer extends Guesser implements Player{
 
     @Override
     public void update(Guess guess, Answer answer) {
-        // To be implemented.
+        // No need to implement in Random Guess player
     } // end of update()
 
 

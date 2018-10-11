@@ -3,15 +3,20 @@ package player;
 import java.util.List;
 
 import world.OppWorld;
-//import world.OtherWorld;
 import world.World;
 import world.OppWorld.cellState;
 import world.World.Coordinate;
 import world.World.ShipLocation;
 
+/**
+ * Guesser class for Random guess player (task A).
+ *
+ * @author Skeleton provided by Youhan Xia, Jeffrey Chan, function implemented by Jyh-woei Yang (s3613252) and YuJue Zou (s3666814)
+ */
+
 public abstract class Guesser implements Player{
 	
-	private static final int NUMBER_OF_VULNERABLE_COORDINATES = 19; //used to be 17
+	private static final int NUMBER_OF_VULNERABLE_COORDINATES = 19; //numbers of ships coordinates
     public World myWorld;
     public OppWorld opponentsWorld;
     public List<Guess> hitsToMyFleet;

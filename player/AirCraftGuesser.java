@@ -16,6 +16,13 @@ import world.World;
 import world.World.Coordinate;
 import world.World.ShipLocation;
 
+/**
+ * AirCraftGuesser class for Probabilistic guess player (task C).
+ * Please implement this class.
+ *
+ * @author Skeleton provided by Youhan Xia, Jeffrey Chan, function implemented by Jyh-woei Yang (s3613252) and YuJue Zou (s3666814)
+ */
+
 class AirCraftGuesser{
 	public Cell[][] board;
     public boolean isSunk;

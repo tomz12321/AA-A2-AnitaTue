@@ -16,7 +16,7 @@ import world.World.ShipLocation;
  * Greedy guess player (task B).
  * Please implement this class.
  *
- * @author Youhan Xia, Jeffrey Chan
+ * @author Skeleton provided by Youhan Xia, Jeffrey Chan, function implemented by Jyh-woei Yang (s3613252) and YuJue Zou (s3666814)
  */
 public class GreedyGuessPlayer implements Player{
 
@@ -32,6 +32,7 @@ public class GreedyGuessPlayer implements Player{
 	private boolean isHit;
 	private LinkedList<Cell> target;
     
+
 	@Override
     public void initialisePlayer(World world) {
         this.numRow = world.numRow;
@@ -69,7 +70,7 @@ public class GreedyGuessPlayer implements Player{
 		//initialize huntGuess
 		for(int i = 0; i < numRow; i++) {
 			for(int j = 0; j < numColumn; j++) {
-				if((i+j) % 2 == 0) 
+				if((i + j) % 2 == 0) 
                     this.huntGuess.add(board[i][j]);
 			}
 		}
@@ -80,7 +81,7 @@ public class GreedyGuessPlayer implements Player{
 
     @Override
     public Answer getAnswer(Guess guess) {
-        // To be implemented.
+        // implemented done by YuJue
     	if(guess == null) return null;
     	Answer answer = new Answer();
     	Coordinate co = new World().new Coordinate();
@@ -150,7 +151,7 @@ public class GreedyGuessPlayer implements Player{
 
     @Override
     public void update(Guess guess, Answer answer) {
-        // To be implemented.
+        // implemented done by YuJue
     	if(answer == null) return;
     	if(answer.isHit) {
     		this.isHit = true;
@@ -181,9 +182,8 @@ public class GreedyGuessPlayer implements Player{
   
     @Override
     public boolean noRemainingShips() {
-        // To be implemented.
+        // implemented done by YuJue
     	return this.ships.isEmpty();
-        // dummy return
     } // end of noRemainingShips()
 
     
@@ -234,7 +234,7 @@ public class GreedyGuessPlayer implements Player{
     	public int hashCode() {
     		return Objects.hash(ship);
     	}
-    }
+    } // end of class OwnShip
     
     
     class Cell{
@@ -264,7 +264,7 @@ public class GreedyGuessPlayer implements Player{
     	public LinkedList<Cell> getAdj(){
     		return this.adjC;
     	}
-    }
+    } // end of class Cell
     
 } // end of class GreedyGuessPlayer
     

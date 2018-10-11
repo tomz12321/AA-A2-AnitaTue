@@ -19,6 +19,7 @@ import ship.*;
  *
  * @author Youhan Xia, Jeffrey Chan
  */
+
 public class World {
     // nested class for keeping the coordinates of ships or shots.
     public class Coordinate {

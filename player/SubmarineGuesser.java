@@ -16,11 +16,18 @@ import world.World;
 import world.World.Coordinate;
 import world.World.ShipLocation;
 
+/**
+ * SubmarineGuesser class for Probabilistic guess player (task C).
+ * Please implement this class.
+ *
+ * @author Skeleton provided by Youhan Xia, Jeffrey Chan, function implemented by Jyh-woei Yang (s3613252) and YuJue Zou (s3666814)
+ */
+
 class SubmarineGuesser{
 	public Cell[][] board;
     public boolean isSunk;
-    private int calNumRow;//playerWorld.numRow;
-    private int calNumColumn;//playerWorld.numColumn;
+    private int calNumRow; //playerWorld.numRow;
+    private int calNumColumn; //playerWorld.numColumn;
 
     private LinkedList<Cell> prob6;
     private LinkedList<Cell> prob5;

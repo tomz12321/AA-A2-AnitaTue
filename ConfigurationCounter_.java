@@ -10,30 +10,20 @@ package world;
  *
  */
 
-public class ConfigurationCounter {
+public class ConfigurationCounter_ {
 	
 	public int[][] ShipConfigurationCounts;
 	public int shipSize;
 	//public int shiplength;
-	public int shiplength;
 	//public int shipwidth;
-	public int shipwidth;
 	public int rows;
 	public int columns;
-	public char mdirection;
-	public char sdirection;
 	
-	//ConfigurationCounter(int rows, int columns, int shipSize)
-	public ConfigurationCounter(int rows, int columns, int shiplength, int shipwidth, char mdirection, char sdirection){
+	public ConfigurationCounter(int rows, int columns, int shipSize){
 		this.ShipConfigurationCounts = new int[rows][columns];
-		//this.shipSize = shipSize; (remove)
+		this.shipSize = shipSize;
 		//this.shiplength = shiplength;
-		this.shiplength = shiplength;
 		//this.shipwidth = shipwidth;
-		this.shipwidth = shipwidth;
-		//this.direction = direction;
-		this.mdirection = mdirection;
-		this.sdirection = sdirection;
 		this.columns = columns;
 		this.rows = rows;
 		initializeArrayToZero();

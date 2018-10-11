@@ -16,7 +16,7 @@ import world.World.ShipLocation;
  * Probabilistic guess player (task C).
  * Please implement this class.
  *
- * @author Youhan Xia, Jeffrey Chan
+ * @author Skeleton provided by Youhan Xia, Jeffrey Chan, function implemented by Jyh-woei Yang (s3613252) and YuJue Zou (s3666814)
  */
 public class ProbabilisticGuessPlayer implements Player{
     
@@ -38,6 +38,9 @@ public class ProbabilisticGuessPlayer implements Player{
     private boolean isHit;
     private LinkedList<Cell> target;
     
+    //if (ishit == true) 1/5 airCraftGuesser, 1/5 cruiserGuesser, 1/5 frigateGuesser, 1/5 submarineGuesser, 1/5 patrolCraftGuesser
+
+
     @Override
     public void initialisePlayer(World world) {
         this.numRow = world.numRow;
@@ -67,7 +70,6 @@ public class ProbabilisticGuessPlayer implements Player{
         submarineGuesser.initialGuesserMap(world);
 
         patrolCraftGuesser = new PatrolCraftGuesser();
-
         //apply patrolCraftGuesser prob map
         patrolCraftGuesser.initialGuesserMap(world);
 
@@ -133,13 +135,14 @@ public class ProbabilisticGuessPlayer implements Player{
         
     } // end of initialisePlayer()
 
+
     //method to initHuntguess
     public void initHuntguess(int probWeight)
     {
         //initialize huntGuess prob = 8
         for(int i = 0; i < numRow; i++) {
             for(int j = 0; j < numColumn; j++) {
-                if((i+j) % 2 == 0)
+                if((i + j) % 2 == 0)
                 {
                     if((airCraftGuesser.getCellValue(i,j)+frigateGuesser.getCellValue(i,j)+submarineGuesser.getCellValue(i,j)+cruiserGuesser.getCellValue(i,j)+patrolCraftGuesser.getCellValue(i,j)) == probWeight)
                     {
@@ -154,9 +157,10 @@ public class ProbabilisticGuessPlayer implements Player{
         }
     }
 
+
     @Override
     public Answer getAnswer(Guess guess) {
-        // To be implemented.
+        // implemented by Jyh Woei.
         if(guess == null) return null;
         Answer answer = new Answer();
         Coordinate co = new World().new Coordinate();
@@ -226,12 +230,12 @@ public class ProbabilisticGuessPlayer implements Player{
 
     @Override
     public void update(Guess guess, Answer answer) {
-        // To be implemented.
+        // implemented by Jyh Woei.
         if(answer == null) return;
         if(answer.isHit) {
             this.isHit = true;
             if(answer.shipSunk == null) {
-                //find the relevant Cell
+                // find the relevant Cell
                 
                 for(Cell[] c : this.board) {
                     for(Cell cell : c) {
@@ -257,9 +261,8 @@ public class ProbabilisticGuessPlayer implements Player{
   
     @Override
     public boolean noRemainingShips() {
-        // To be implemented.
+        // implemented by Jyh Woei.
         return this.ships.isEmpty();
-        // dummy return
     } // end of noRemainingShips()
 
     

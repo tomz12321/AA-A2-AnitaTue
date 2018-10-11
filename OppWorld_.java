@@ -6,13 +6,11 @@ import java.util.List;
 import world.ConfigurationCounter;
 import world.World.Coordinate;
 
-/** 
- * A Class designed to store the state of the opponents world
- *
- *  @author Jyh-woei Yang
+/* 
+ * Our Class to store the state of the opponents world
  */
 
-public class OppWorld {
+public class OppWorld_ {
 	
 	private World world = new World();
 	private boolean checkPossibles = false;
@@ -29,35 +27,30 @@ public class OppWorld {
 	public cellState[][] oppWorld = null; 
 	public List<ConfigurationCounter> ShipCounters = new ArrayList<>();
 	public ConfigurationCounter total;
-	public ConfigurationCounter size23AircraftCarrier; //size 23 AircraftCarrier
-	public ConfigurationCounter size14Frigate;
-	public ConfigurationCounter size13Submarine;
-	public ConfigurationCounter size22Cruiser;
-	public ConfigurationCounter size12PatrolCraft; // size 12 Patrol Craft
+	public ConfigurationCounter size5AircraftCarrier;
+	public ConfigurationCounter size4Battleship;
+	public ConfigurationCounter size3Submarine;
+	public ConfigurationCounter size3Cruiser;
+	public ConfigurationCounter size2Destroyer;
 	
 	public void initialiseShipCounters(){
-		total = new ConfigurationCounter(numRows, numColumns, 0,0,'E','S');
-		size23AircraftCarrier = new ConfigurationCounter(numRows, numColumns, 2,3,'E','S');
-		size14Frigate = new ConfigurationCounter(numRows, numColumns, 1,4,'S','E');
-		size13Submarine = new ConfigurationCounter(numRows, numColumns, 1,3,'S','E');
-		size22Cruiser = new ConfigurationCounter(numRows, numColumns, 2,2,'E','N');
-		size12PatrolCraft = new ConfigurationCounter(numRows, numColumns, 1,2,'S','W');
-
-		ShipCounters.add(size23AircraftCarrier);
-		ShipCounters.add(size14Frigate);
-		ShipCounters.add(size13Submarine);
-		ShipCounters.add(size22Cruiser);
-		ShipCounters.add(size12PatrolCraft);
+		total = new ConfigurationCounter(numRows, numColumns, 0);
+		size5AircraftCarrier = new ConfigurationCounter(numRows, numColumns, 5);
+		size4Battleship = new ConfigurationCounter(numRows, numColumns, 4);
+		size3Submarine = new ConfigurationCounter(numRows, numColumns, 3);
+		size3Cruiser = new ConfigurationCounter(numRows, numColumns, 3);
+		size2Destroyer = new ConfigurationCounter(numRows, numColumns, 2);
+		ShipCounters.add(size5AircraftCarrier);
+		ShipCounters.add(size4Battleship);
+		ShipCounters.add(size3Submarine);
+		ShipCounters.add(size3Cruiser);
+		ShipCounters.add(size2Destroyer);
 	}
 	
 	// Copy of the world boundaries
 	public int numRows;
 	public int numColumns;
 	
-	public OppWorld(){
-		//default construtor
-	}
-
 	// Constructor Class
 	public OppWorld( int numRow, int numColumn, boolean checkPossibles )
 	{
