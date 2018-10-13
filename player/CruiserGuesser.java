@@ -59,32 +59,32 @@ class CruiserGuesser{
         }
 
         //prob4 elements
-        for(int i = 1; i <= 8; i++)
-            for(int j = 1; j <= 8; j++)  
+        for(int i = 1; i <= calNumRow-2; i++)
+            for(int j = 1; j <= calNumColumn-2; j++)  
                 setCellValue(i, j, 4);
 
         //prob3 elements
-        for(int i = 1; i <= 8; i++)
+        for(int i = 1; i <= calNumRow-2; i++)
             setCellValue(i, 0, 3);
 
-        for(int i = 1; i <= 8; i++)
+        for(int i = 1; i <= calNumColumn-2; i++)
             setCellValue(0, i, 3);
 
-        for(int i = 1; i <= 8; i++)
-            setCellValue(9, i, 3);
+        for(int i = 1; i <= calNumColumn-2; i++)
+            setCellValue(calNumRow-1, i, 3);
 
-        for(int i = 1; i <= 8; i++)
-            setCellValue(i, 9, 3);
+        for(int i = 1; i <= calNumRow-2; i++)
+            setCellValue(i, calNumColumn-1, 3);
 
         //prob2 elements
         setCellValue(0, 0, 1);
-        setCellValue(0, 9, 1);
-        setCellValue(9, 0, 1);
-        setCellValue(9, 9, 1);
+        setCellValue(0, calNumColumn-1, 1);
+        setCellValue(calNumRow-1, 0, 1);
+        setCellValue(calNumRow-1, calNumColumn-1, 1);
 
         //setElements into list
-            for(int i = 0; i < 10; i++)
-                for (int j = 0; j < 10; j++)
+            for(int i = 0; i < calNumRow; i++)
+                for (int j = 0; j < calNumColumn; j++)
                 {
                     if (getCellValue(i,j) == 4)
                         prob4.add(board[i][j]);

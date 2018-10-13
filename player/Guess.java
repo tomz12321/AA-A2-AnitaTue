@@ -11,6 +11,16 @@ public class Guess {
     /** column of cell to fire at. */
     public int column = 0;
 
+    // Guess(){
+    //     //return new Guess();
+    // }
+
+    // Guess(int i, int j)
+    // {
+    //     this.row = i;
+    //     this.column = j;
+    // }
+    
     /**
      * Prints out guess information.
      */

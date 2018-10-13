@@ -130,6 +130,13 @@ public class BattleshipMain {
                     // Player 1's turn
                     // Keep playing as long as player 2 still have ships
                     if (!p2HasNoShipsLeft) {
+                        //debug Tom
+                        // if(p1.makeGuess().row == -1 && p1.makeGuess().column == -1){
+                        //     p2Rounds = Round;
+                        //     p1HasNoShipsLeft = true;
+                        //     System.out.println("debug p1");
+                        //     break;
+                        // }
                         // player 1 makes a guess
                         Guess guess = p1.makeGuess();
                         if (logWriter != null) {
@@ -162,6 +169,13 @@ public class BattleshipMain {
                     // Player 2's turn
                     // Keep playing as long as player 1 still have ships
                     if (!p1HasNoShipsLeft) {
+                        //debug Tom
+                        // if(p2.makeGuess().row == -1 && p2.makeGuess().column == -1){
+                        //     p1Rounds = Round;
+                        //     p2HasNoShipsLeft = true;
+                        //     System.out.println("debug p2");
+                        //     break;
+                        // }
                         // player 2 makes a guess
                         Guess guess = p2.makeGuess();
                         if (logWriter != null) {

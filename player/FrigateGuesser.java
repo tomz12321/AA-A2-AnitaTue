@@ -66,97 +66,97 @@ class FrigateGuesser{
         }
 
         //prob8 elements
-        for(int i = 3; i <= 6; i++)
+        for(int i = 3; i <= calNumRow-4; i++)
         {
-            for(int j = 3; j <= 6; j++)  
+            for(int j = 3; j <= calNumColumn-4; j++)  
                 setCellValue(i, j, 8);
         }
 
         //pro7 elements
-        for(int i = 3; i <= 6; i++)
+        for(int i = 3; i <= calNumRow-4; i++)
             setCellValue(i, 2, 7);
 
-        for(int i = 3; i <= 6; i++)
-            setCellValue(i, 7, 7);
+        for(int i = 3; i <= calNumRow-4; i++)
+            setCellValue(i, calNumColumn-3, 7);
 
-        for(int i = 3; i <= 6; i++)
+        for(int i = 3; i <= calNumColumn-4; i++)
             setCellValue(2, i, 7);
 
-        for(int i = 3; i <= 6; i++)
-            setCellValue(7, i, 7);
+        for(int i = 3; i <= calNumColumn-4; i++)
+            setCellValue(calNumRow-3, i, 7);
 
         //prob6 elements
-            setCellValue(7,2,6);
-            setCellValue(2,7,6);
+            setCellValue(calNumRow-3,2,6);
+            setCellValue(2,calNumColumn-3,6);
             setCellValue(2,2,6);
-            setCellValue(7,7,6);
-        for(int i = 3; i <= 6; i++)
+            setCellValue(calNumRow-3,calNumColumn-3,6);
+        for(int i = 3; i <= calNumRow-4; i++)
             setCellValue(i, 1, 6);
 
-        for(int i = 3; i <= 6; i++)
-            setCellValue(i, 8, 6);
+        for(int i = 3; i <= calNumRow-4; i++)
+            setCellValue(i, calNumColumn-2, 6);
 
-        for(int i = 3; i <= 6; i++)
+        for(int i = 3; i <= calNumColumn-4; i++)
             setCellValue(1, i, 6);
 
-        for(int i = 3; i <= 6; i++)
-            setCellValue(8, i, 6);
+        for(int i = 3; i <= calNumColumn-4; i++)
+            setCellValue(calNumRow-2, i, 6);
 
         //prob5 elements
             setCellValue(1,2,5);
             setCellValue(2,1,5);
-            setCellValue(7,8,5);
-            setCellValue(8,7,5);
-            setCellValue(8,2,5);
-            setCellValue(7,1,5);
-            setCellValue(2,8,5);
-            setCellValue(1,7,5);      
+            setCellValue(calNumRow-3,calNumColumn-2,5);
+            setCellValue(calNumRow-2,calNumColumn-3,5);
+            setCellValue(calNumRow-2,2,5);
+            setCellValue(calNumRow-3,1,5);
+            setCellValue(2,calNumColumn-2,5);
+            setCellValue(1,calNumColumn-3,5);      
 
-        for(int i = 3; i <= 6; i++)
+        for(int i = 3; i <= calNumRow-4; i++)
             setCellValue(i, 0, 6);
 
-        for(int i = 3; i <= 6; i++)
-            setCellValue(i, 9, 6);
+        for(int i = 3; i <= calNumRow-4; i++)
+            setCellValue(i, calNumRow-1, 6);
 
-        for(int i = 3; i <= 6; i++)
+        for(int i = 3; i <= calNumColumn-4; i++)
             setCellValue(0, i, 6);
 
-        for(int i = 3; i <= 6; i++)
-            setCellValue(9, i, 6);
+        for(int i = 3; i <= calNumColumn-4; i++)
+            setCellValue(calNumRow-1, i, 6);
 
         //prob4 elements
             setCellValue(1,1,4);
-            setCellValue(8,8,4);
-            setCellValue(1,8,4);
-            setCellValue(8,1,4);
+            setCellValue(calNumRow-2,calNumColumn-2,4);
+            setCellValue(1,calNumColumn-2,4);
+            setCellValue(calNumRow-2,1,4);
             setCellValue(2,0,4);
             setCellValue(0,2,4);
-            setCellValue(2,9,4);
-            setCellValue(0,7,4);
-            setCellValue(9,2,4);
-            setCellValue(7,0,4);
-            setCellValue(9,7,4);
-            setCellValue(7,9,4);
+            setCellValue(2,calNumColumn-1,4);
+            setCellValue(0,calNumColumn-3,4);
+            setCellValue(calNumRow-1,2,4);
+            setCellValue(calNumRow-3,0,4);
+            setCellValue(calNumRow-1,calNumColumn-3,4);
+            setCellValue(calNumRow-3,calNumColumn-1,4);
 
         //prob3 elements
             setCellValue(1,0,3);
             setCellValue(0,1,3);
-            setCellValue(9,8,3);
-            setCellValue(8,9,3);
-            setCellValue(9,1,3);
-            setCellValue(8,0,3);
-            setCellValue(0,8,3);
-            setCellValue(1,9,3);
+            setCellValue(calNumRow-1,calNumColumn-2,3);
+            setCellValue(calNumRow-2,calNumColumn-1,3);
+            setCellValue(calNumRow-1,1,3);
+            setCellValue(calNumRow-2,0,3);
+            setCellValue(0,calNumColumn-2,3);
+            setCellValue(1,calNumColumn-1,3);
 
         //prob2 elements
             setCellValue(0,0,2);
-            setCellValue(0,9,2);
-            setCellValue(9,0,2);
-            setCellValue(9,9,2);
+            setCellValue(0,calNumColumn-1,2);
+            setCellValue(calNumRow-1,0,2);
+            setCellValue(calNumRow-1,calNumColumn-1,2);
 
         //setElements into list
-            for(int i = 0; i < 10; i++)
-                for (int j = 0; j < 10; j++)
+            for(int i = 0; i < calNumRow; i++)
+                for (int j = 0; j < calNumColumn; j++)
                 {
                     if(getCellValue(i,j) == 8)
                         prob8.add(board[i][j]);

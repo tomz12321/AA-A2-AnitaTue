@@ -12,7 +12,7 @@ import java.lang.Math;
  * Random guess player (task A).
  * Please implement this class.
  *
- * @author Youhan Xia, Jeffrey Chan
+ * @author Skeleton provided by Youhan Xia, Jeffrey Chan, function implemented by Jyh-woei Yang (s3613252) and YuJue Zou (s3666814)
  */
 public class RandomGuessPlayer extends Guesser implements Player{
 
